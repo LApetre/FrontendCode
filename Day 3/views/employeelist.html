@@ -1,3 +1,5 @@
+
+<p> Search by: </p><input ng-model="nametext"> </p>
 <table class="table table-striped">
     <tr>
         <th>ID</th>
@@ -14,7 +16,7 @@
         <!--TODO #HR4 add Actions column-->
         <th class="col-lg-3 text-center">Actions</th>
     </tr>
-    <tr ng-repeat="employee in employees">
+    <tr ng-repeat="employee in employees| filter:nametext |orderBy: 'lastName'">
         <td class="text-center">
             {{employee.employeeId}}
         </td>

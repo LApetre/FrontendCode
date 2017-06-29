@@ -6,12 +6,27 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
 </head>
 <body>
-<div ng-app="hrApp">
-    <div ng-include="'views/menu.html'"></div>
 
-    <!--TODO #5 add ng-view directive-->
-    <div class="container" ng-view></div>
+<div class="container-fluid">
+    <div ng-app="hrApp">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="row"></div>
+                <div ng-include="'views/menu.html'"></div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <!--TODO #5 add ng-view directive-->
+                    <div class="container col-lg-10" ng-view></div>
+                    <div class="col-lg-1"></div>
+                </div>
 
+            </div>
+            <div class="col-lg-1"></div>
+
+        </div>
+
+    </div>
 </div>
 <!--<h1>HR Application</h1>-->
 <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
@@ -25,6 +40,7 @@
 <script type="text/javascript" src="scripts/controllers/demo/RequestController.js"></script>
 <script type="text/javascript" src="scripts/services/MenuServices.js"></script>
 <script type="text/javascript" src="scripts/services/demo/MathService.js"></script>
+<script type="text/javascript" src="scripts/services/demo/UserService.js"></script>
 <script type="text/javascript" src="scripts/services/CommonResourcesFactory.js"></script>
 <script type="text/javascript" src="scripts/controllers/EmployeeListController.js"></script>
 <script type="text/javascript" src="scripts/controllers/EmployeeViewController.js"></script>
