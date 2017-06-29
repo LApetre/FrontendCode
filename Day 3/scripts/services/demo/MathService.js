@@ -1,12 +1,17 @@
 hrApp.service('MathService', function () {
         return {
-            add: function (a,b) {
+            add: function ( a, b) {
                 return a+b;
             },
-            substract: function (a,b) {
+            substract: function ( a, b) {
                 return a-b;
+            },
+            mul: function( a, b){
+                return a*b;
+            },
+            div: function( a, b){
+                return a/b;
             }
-            // TODO #14 add multiply and divide functions
         }
     }
 );
