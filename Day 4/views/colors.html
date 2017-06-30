@@ -1,0 +1,12 @@
+<select ng-model="myColor" ng-options="color.text group by color.type for color in colors" ng-change="changeColor()"></select>
+<span ng-class="myClass">
+    Some text
+</span>
+<p> Filter: <input type="text" ng-model="search"> </p>
+<p> Sort by: <select ng-model="mySort" ng-options="key as key for (key,value) in colors[0]"></select> </p>
+<table class="table table-striped">
+    <th> Text </th> <th> Class </th> <th> Type </th>
+    <tr ng-repeat="color in colors| filter:search | orderBy: mySort">
+        <td> {{color.text}} </td> <td> {{color.class}}</td>  <td>  {{color.type}} </td>
+    </tr>
+</table>

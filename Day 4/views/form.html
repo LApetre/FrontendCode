@@ -1,0 +1,14 @@
+
+<form ng-submit="submitMe(myForm.$valid)" name="myForm" ng-controller="FormsController" class="my-form">
+    <p>
+        My Input: <input name="input" ng-model="myInput" ng-change="showErr()" required>
+        <span ng-show="myForm.input.$error.required"> Required! </span>
+    </p>
+    myForm.$valid = {{myForm.$valid}}<br>
+    myForm.$dirty = {{myForm.$dirty}}<br>
+    myForm.$pristine = {{myForm.$pristine}}<br>
+    myForm.$submitted = {{myForm.$submitted}}<br>
+    myForm.input.$error = {{myForm.input.$error}}<br>
+    myForm.input.$invalid = {{myForm.input.$invalid}}<br>
+    <input type="submit" id="submit"  value="Submit">
+</form>
